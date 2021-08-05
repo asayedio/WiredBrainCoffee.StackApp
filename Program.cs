@@ -13,16 +13,16 @@ namespace WiredBrainCoffee.StackApp
 
         private static void StackDoubles()
         {
-            var simpleStack = new SimpleStack();
+            var stack = new SimpleStack<double>();
             double sum = 0.0;
-            simpleStack.Push(1.2);
-            simpleStack.Push(2.3);
-            simpleStack.Push(3.5);
+            stack.Push(1.2);
+            stack.Push(2.3);
+            stack.Push(3.5);
 
-            while (simpleStack.Count > 0)
+            while (stack.Count > 0)
             {
                 double item;
-                item = simpleStack.Pop();
+                item = stack.Pop();
                 Console.WriteLine($"Item is: {item}");
                 sum += item;
             }
@@ -31,14 +31,14 @@ namespace WiredBrainCoffee.StackApp
 
         private static void StackStrings()
         {
-            var simpleStack = new SimpleStack();
-            simpleStack.Push("Ahmed");
-            simpleStack.Push("Sayed");
-            simpleStack.Push("Sobhy");
+            var stack = new SimpleStack<string>();
+            stack.Push("Ahmed");
+            stack.Push("Sayed");
+            stack.Push("Sobhy");
 
-            while (simpleStack.Count > 0)
+            while (stack.Count > 0)
             {
-                Console.WriteLine($"Item is: {simpleStack.Pop();}");
+                Console.WriteLine($"Item is: {stack.Pop()}");
             }
         }
     }
